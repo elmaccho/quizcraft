@@ -1,15 +1,12 @@
 package com.example.quizcraft.api;
 
-import com.example.quizcraft.User;
-
 import okhttp3.ResponseBody;
 import retrofit2.Call;
-import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.POST;
 
-public interface Api {
+public interface RejestracjaApi {
     @FormUrlEncoded
     @POST("rejestracja_api.php")
     Call<ResponseBody> registerUser(
