@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroung_img"
+    tools:context=".Rejestracja">
+
+    <ImageView
+        android:id="@+id/a2_iv_logo"
+        android:layout_width="88dp"
+        android:layout_height="88dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="36dp"
+        android:layout_marginRight="0dp"
+        android:background="@drawable/logo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/a2_tv_zarejestruj"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="Zarejestruj się"
+        android:textAllCaps="true"
+        android:textColor="@color/white"
+        android:textSize="38sp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/a2_iv_logo" />
+
+    <TextView
+        android:id="@+id/a2_tv_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="20dp"
+        android:text="Twoje imię"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/a2_tv_zarejestruj" />
+
+    <EditText
+        android:id="@+id/a2_et_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="26dp"
+        android:background="@drawable/edittext"
+        android:hint="Imię"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="#717171"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/a2_tv_name" />
+
+    <TextView
+        android:id="@+id/a2_tv_nickname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="20dp"
+        android:text="Twój nick"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/a2_et_name" />
+
+    <EditText
+        android:id="@+id/a2_et_nickname"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="26dp"
+        android:background="@drawable/edittext"
+        android:hint="Nick"
+        android:inputType="text"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="#717171"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/a2_tv_nickname" />
+
+    <TextView
+        android:id="@+id/a2_tv_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="20dp"
+        android:text="Twój email"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/a2_et_nickname" />
+
+    <EditText
+        android:id="@+id/a2_et_email"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="26dp"
+        android:background="@drawable/edittext"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="#717171"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/a2_tv_email" />
+
+    <TextView
+        android:id="@+id/a2_tv_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="37dp"
+        android:layout_marginTop="20dp"
+        android:text="Twoje hasło"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/a2_et_email" />
+
+    <EditText
+        android:id="@+id/a2_et_password"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="26dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="26dp"
+        android:background="@drawable/edittext"
+        android:hint="Hasło"
+        android:inputType="textPassword"
+        android:padding="12dp"
+        android:textColor="@color/white"
+        android:textColorHint="#717171"
+        android:textSize="18sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/a2_tv_password" />
+
+    <Button
+        android:id="@+id/a2_btn_register"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/login_btn"
+        android:paddingTop="14dp"
+        android:paddingBottom="14dp"
+        android:text="Zarejestruj się"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/a2_et_password" />
+
+    <TextView
+        android:id="@+id/a2_tv_account_question"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/a2_btn_register"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Masz już konto?"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="24dp"
+        android:layout_marginLeft="90dp"
+        />
+    <TextView
+        android:id="@+id/a2_tv_login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/a2_btn_register"
+        app:layout_constraintLeft_toRightOf="@id/a2_tv_account_question"
+        app:layout_constraintRight_toRightOf="parent"
+        android:text="Zaloguj się"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="24dp"
+        android:layout_marginRight="90dp"
+        android:clickable="true"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
