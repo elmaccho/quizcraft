@@ -1,7 +1,7 @@
 package com.example.quizcraft;
 
 import android.os.Bundle;
-import android.util.Log;
+
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,6 +26,7 @@ public class Rejestracja extends AppCompatActivity {
 
     private EditText etName, etNickname, etEmail, etPassword;
     private Button btnRegister;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +59,7 @@ public class Rejestracja extends AppCompatActivity {
                 String password = etPassword.getText().toString();
 
                 if (username.isEmpty() || name.isEmpty() || email.isEmpty() || password.isEmpty()) {
-                    Toast.makeText(Rejestracja.this, "Wszystkie pola muszą być wypełnione!", Toast.LENGTH_SHORT).show();
+                    CustomToast.showToast(Rejestracja.this, "Wypełnij wszystkie pola!", R.drawable.logo, Toast.LENGTH_LONG);
                     return;
                 }
 
@@ -77,16 +78,16 @@ public class Rejestracja extends AppCompatActivity {
                     @Override
                     public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                         if (response.isSuccessful()) {
-                            Toast.makeText(Rejestracja.this, "Rejestracja zakończona sukcesem!", Toast.LENGTH_SHORT).show();
+                            CustomToast.showToast(Rejestracja.this, "Rejestracja zakończona sukcesem!", R.drawable.logo, Toast.LENGTH_LONG);
                         } else {
-                            Toast.makeText(Rejestracja.this, "Błąd rejestracji", Toast.LENGTH_SHORT).show();
+                            CustomToast.showToast(Rejestracja.this, "Błąd rejestracji.", R.drawable.logo, Toast.LENGTH_LONG);
                             System.out.println("HTTP error code: " + response.code());
                         }
                     }
 
                     @Override
                     public void onFailure(Call<ResponseBody> call, Throwable t) {
-                        Toast.makeText(Rejestracja.this, "Błąd połączenia z serwerem", Toast.LENGTH_SHORT).show();
+                        CustomToast.showToast(Rejestracja.this, "Błąd połączenia z serwerem.", R.drawable.logo, Toast.LENGTH_LONG);
                         t.printStackTrace();
                     }
                 });

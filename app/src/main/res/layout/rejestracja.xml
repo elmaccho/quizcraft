@@ -190,7 +190,7 @@
         app:layout_constraintRight_toRightOf="parent"
         android:text="Zaloguj się"
         android:textSize="16sp"
-        android:textColor="@color/white"
+        android:textColor="#7B63F2"
         android:layout_marginTop="24dp"
         android:layout_marginRight="90dp"
         android:clickable="true"
