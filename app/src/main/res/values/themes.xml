@@ -5,5 +5,11 @@
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
     </style>
 
+    <style name="Base.Theme.Quizcraft_profil" parent="Theme.Material3.DayNight.NoActionBar">
+        <!--  Customize your light theme here.  -->
+        <!--  <item name="colorPrimary">@color/my_light_primary</item>  -->
+    </style>
+    <style name="Theme.Quizcraft_profil" parent="Base.Theme.Quizcraft_profil"/>
+
     <style name="Theme.QuizCraft" parent="Base.Theme.QuizCraft" />
 </resources>
