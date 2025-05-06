@@ -90,10 +90,13 @@ public class Rejestracja extends AppCompatActivity {
 
                                     if (apiResponse != null && apiResponse.message != null) {
                                         CustomToast.showToast(Rejestracja.this, apiResponse.message, R.drawable.logo, Toast.LENGTH_LONG);
-                                        Intent intent = new Intent(Rejestracja.this, Logowanie.class);
-                                        startActivity(intent);
 
-                                        finish();
+                                        if(apiResponse.message.equalsIgnoreCase("Zarejestrowano pomyślnie.")){
+                                            Intent intent = new Intent(Rejestracja.this, Logowanie.class);
+                                            startActivity(intent);
+                                            finish();
+                                        }
+
                                     } else {
                                         CustomToast.showToast(Rejestracja.this, "Błąd rejestracji: Nieznany błąd.", R.drawable.logo, Toast.LENGTH_LONG);
                                     }
