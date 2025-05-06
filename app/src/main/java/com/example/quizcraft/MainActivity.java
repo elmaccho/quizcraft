@@ -1,6 +1,7 @@
 package com.example.quizcraft;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 
@@ -12,7 +13,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button button_home, button_user, button_nozna, button_loga, button_zwierzeta;
+    Button buttonProfile;
 
     @SuppressLint("MissingInflatedId")
     @Override
@@ -24,6 +25,13 @@ public class MainActivity extends AppCompatActivity {
             Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
             return insets;
+        });
+
+        buttonProfile = findViewById(R.id.button_profile);
+
+        buttonProfile.setOnClickListener(v -> {
+            Intent intent = new Intent(MainActivity.this, Profil.class);
+            startActivity(intent);
         });
     }
 }
