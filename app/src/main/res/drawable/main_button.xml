@@ -4,16 +4,16 @@
         <ripple android:color="#4644A6">
             <item>
                 <shape>
-                    <solid android:color="#5856D6" />
-                    <corners android:radius="8dp" />
+                    <solid android:color="#5856D6"/>
+                    <corners android:radius="8dp"/>
                 </shape>
             </item>
         </ripple>
     </item>
     <item>
         <shape>
-            <solid android:color="#5856D6" />
-            <corners android:radius="8dp" />
+            <solid android:color="#5856D6"/>
+            <corners android:radius="8dp"/>
         </shape>
     </item>
 </selector>

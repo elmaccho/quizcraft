@@ -98,7 +98,7 @@ public class Logowanie extends AppCompatActivity {
                                     editor.apply();
 
                                     // Przekieruj do MainActivity
-                                    Intent intent = new Intent(Logowanie.this, Profil.class);
+                                    Intent intent = new Intent(Logowanie.this, MainActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }
