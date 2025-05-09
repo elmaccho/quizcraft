@@ -1,7 +1,10 @@
 package com.example.quizcraft;
 
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,6 +29,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 
 public class Profil extends AppCompatActivity {
 
+    Button buttonHome;
     private TextView tvNick, tvData, tvWygrane1, tvRemisy1, tvPorazki1, tvRozQuizy1, tvDni1, tvSku1, tvKategoria1;
     private ImageView ivProfil, cameraButton;
 
@@ -45,6 +49,7 @@ public class Profil extends AppCompatActivity {
         tvKategoria1 = findViewById(R.id.tv_kategoria1);
         ivProfil = findViewById(R.id.iv_profil);
         cameraButton = findViewById(R.id.cameraButton);
+        buttonHome = findViewById(R.id.button_home);
 
         SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
         int userId = prefs.getInt("userId", -1);
@@ -56,6 +61,21 @@ public class Profil extends AppCompatActivity {
         }
 
         fetchUserData(userId);
+
+        buttonHome.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Profil.this, MainActivity.class);
+                startActivity(intent);
+            }
+        });
+        cameraButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Profil.this, Ustawienia.class);
+                startActivity(intent);
+            }
+        });
     }
 
     private void fetchUserData(int userId) {
@@ -104,7 +124,6 @@ public class Profil extends AppCompatActivity {
                         int allgames = gamesWon + gamesDraw + gamesLost;
                         String effectiveness = answers > 0 ? String.format(Locale.getDefault(), "%.0f%%", (correctAnswers * 100.0 / answers)) : "0%";
 
-                        // Wyświetl dane w UI
                         tvNick.setText("@" + username);
                         tvData.setText(formattedDate);
                         tvWygrane1.setText(String.valueOf(gamesWon));

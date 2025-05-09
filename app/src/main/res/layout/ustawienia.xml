@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ustawienia">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_h01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_h02"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.14" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_v01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.15" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_v02"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_v03"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_v04"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_v05"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.1" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_h03"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.4" />
+
+    <View
+        android:id="@+id/bg_gora"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#3700A6"
+        app:layout_constraintBottom_toTopOf="@+id/gl_h01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/gl_h01"
+        app:layout_constraintStart_toStartOf="@+id/gl_v02"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_quizcraft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QuizCraft"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/gl_h01"
+        app:layout_constraintStart_toEndOf="@+id/iv_logo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/bg_dol"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/tlo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gl_h01"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/button_zapisz"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/main_button"
+        android:text="ZAPISZ ZMIANY"
+        android:textColor="#FFFFFF"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gl_v03"
+        app:layout_constraintStart_toStartOf="@+id/gl_v01" />
+
+    <TextView
+        android:id="@+id/tv_edycjaprofilu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="EDYCJA PROFILU"
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/gl_h02"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <View
+        android:id="@+id/profile_pic"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@drawable/profile"
+        app:layout_constraintBottom_toTopOf="@+id/gl_h03"
+        app:layout_constraintEnd_toStartOf="@+id/gl_v03"
+        app:layout_constraintStart_toStartOf="@+id/gl_v01"
+        app:layout_constraintTop_toTopOf="@+id/gl_h02" />
+
+    <TextView
+        android:id="@+id/tv_imie"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Twoje imię"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:padding="10dp"
+        app:layout_constraintStart_toStartOf="@+id/gl_v01"
+        app:layout_constraintTop_toTopOf="@+id/gl_h03" />
+
+    <EditText
+        android:id="@+id/et_imie"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_edittext_background"
+        android:hint="Imie"
+        android:padding="16dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toStartOf="@+id/gl_v04"
+        app:layout_constraintStart_toStartOf="@+id/gl_v05"
+        app:layout_constraintTop_toBottomOf="@+id/tv_imie" />
+
+    <ImageView
+        android:id="@+id/cameraButton"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@drawable/edit"
+        app:layout_constraintEnd_toEndOf="@+id/profile_pic"
+        app:layout_constraintBottom_toBottomOf="@+id/profile_pic"
+        android:layout_marginEnd="-5dp"
+        android:layout_marginBottom="-5dp" />
+
+    <TextView
+        android:id="@+id/tv_nick"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="Twój nick"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="@+id/gl_v01"
+        app:layout_constraintTop_toBottomOf="@+id/et_imie" />
+
+    <EditText
+        android:id="@+id/et_nick"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_edittext_background"
+        android:hint="Nick"
+        android:padding="16dp"
+        android:textColor="@android:color/white"
+        android:textColorHint="#757575"
+        app:layout_constraintEnd_toStartOf="@+id/gl_v04"
+        app:layout_constraintStart_toStartOf="@+id/gl_v05"
+        app:layout_constraintTop_toBottomOf="@+id/tv_nick" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

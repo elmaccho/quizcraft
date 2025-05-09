@@ -87,7 +87,6 @@ public class Logowanie extends AppCompatActivity {
                             if (apiResponse != null && apiResponse.message != null) {
                                 CustomToast.showToast(Logowanie.this, apiResponse.message, R.drawable.logo, Toast.LENGTH_LONG);
                                 if (apiResponse.success && apiResponse.user != null) {
-                                    // Zapisz dane użytkownika w SharedPreferences
                                     SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
                                     SharedPreferences.Editor editor = prefs.edit();
                                     editor.putInt("userId", apiResponse.user.getId());
