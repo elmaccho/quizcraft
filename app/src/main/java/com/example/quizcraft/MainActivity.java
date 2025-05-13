@@ -22,7 +22,6 @@ import androidx.core.view.WindowInsetsCompat;
 import com.bumptech.glide.Glide;
 import com.example.quizcraft.api.ApiResponse;
 import com.example.quizcraft.api.RetrofitClient;
-import com.example.quizcraft.Category;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     Button buttonProfile;
     LinearLayout categoriesContainer;
     private static final int ITEMS_PER_ROW = 3;
-    private static final String BASE_URL = "http://192.168.1.34";
+    private static final String BASE_URL = "http://192.168.1.224";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

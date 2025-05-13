@@ -65,7 +65,6 @@ public class Logowanie extends AppCompatActivity {
     }
 
     private void loginUser(String email, String password) {
-        // Logowanie wysyłanych danych
         Log.d("LoginRequest", "Email: " + email + ", Password: " + password);
 
         LogowanieApi apiService = RetrofitClient.getRetrofitInstance().create(LogowanieApi.class);
@@ -78,7 +77,6 @@ public class Logowanie extends AppCompatActivity {
                     try {
                         if (response.body() != null) {
                             String responseBody = response.body().string();
-                            // Logowanie surowej odpowiedzi
                             Log.d("ResponseBody", responseBody);
 
                             Gson gson = new Gson();
@@ -96,8 +94,7 @@ public class Logowanie extends AppCompatActivity {
                                     editor.putString("photo", apiResponse.user.getPhoto());
                                     editor.apply();
 
-                                    // Przekieruj do MainActivity
-                                    Intent intent = new Intent(Logowanie.this, MainActivity.class);
+                                    Intent intent = new Intent(Logowanie.this, Ladowanie.class);
                                     startActivity(intent);
                                     finish();
                                 }

@@ -65,7 +65,7 @@ public class Profil extends AppCompatActivity {
         buttonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Profil.this, MainActivity.class);
+                Intent intent = new Intent(Profil.this, Ladowanie.class);
                 startActivity(intent);
             }
         });
@@ -80,7 +80,7 @@ public class Profil extends AppCompatActivity {
 
     private void fetchUserData(int userId) {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.1.34/")
+                .baseUrl("http://192.168.1.224/")
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

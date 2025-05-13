@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_h01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.07" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_v01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_v02"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.33" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/gl_v03"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.66" />
+
+    <View
+        android:id="@+id/bg_gora"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="#3700A6"
+        app:layout_constraintBottom_toTopOf="@+id/gl_h01"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/title_quizcraft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="QuizCraft"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/gl_h01"
+        app:layout_constraintStart_toEndOf="@+id/iv_logo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/iv_logo"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/logo"
+        app:layout_constraintBottom_toTopOf="@+id/gl_h01"
+        app:layout_constraintStart_toStartOf="@+id/gl_v02"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/bg_dol"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/tlo"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gl_h01" />
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/avatar_icon"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gl_h01" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/avatar"
+        app:layout_constraintTop_toTopOf="@+id/gl_h01" />
+
+    <ImageView
+        android:id="@+id/iv_01"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/dobre"
+        app:layout_constraintStart_toEndOf="@+id/avatar"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/iv_02"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/zle"
+        app:layout_constraintStart_toEndOf="@+id/iv_01"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/iv_03"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/dobre"
+        app:layout_constraintStart_toEndOf="@+id/iv_02"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+        android:id="@+id/iv_04"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/zegar"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_03"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <ImageView
+
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/zegar"
+        android:layout_marginLeft="5dp"
+        app:layout_constraintStart_toEndOf="@+id/iv_04"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <TextView
+        android:id="@+id/tv_runda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="RUNDA: 4"
+        android:textColor="@color/white"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/gl_h01" />
+
+    <TextView
+        android:id="@+id/tv_pytanie"
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/tlo_pytanie"
+        android:gravity="center"
+        android:text="Ile wierzchołkow ma sześcian?"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/avatar" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:indeterminate="false"
+        android:max="100"
+        android:progress="70"
+        android:padding="20dp"
+        android:layout_marginTop="10dp"
+        android:progressDrawable="@drawable/licznik"
+        app:layout_constraintTop_toBottomOf="@+id/tv_pytanie" />
+
+    <Button
+        android:id="@+id/button_odp1"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_odp"
+        android:text="4"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/bg_dol"
+        app:layout_constraintStart_toStartOf="@+id/bg_dol"
+        app:layout_constraintTop_toBottomOf="@+id/progressBar" />
+
+    <Button
+        android:id="@+id/button_odp2"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_odp"
+        android:text="6"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="@+id/bg_dol"
+        app:layout_constraintStart_toStartOf="@+id/bg_dol"
+        app:layout_constraintTop_toBottomOf="@+id/button_odp1" />
+
+    <Button
+        android:id="@+id/button_odp3"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_odp"
+        android:text="8"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="@+id/bg_dol"
+        app:layout_constraintStart_toStartOf="@+id/bg_dol"
+        app:layout_constraintTop_toBottomOf="@+id/button_odp2" />
+
+    <Button
+        android:id="@+id/button_odp4"
+        android:layout_width="350dp"
+        android:layout_height="70dp"
+        android:background="@drawable/button_odp"
+        android:text="10"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="@+id/bg_dol"
+        app:layout_constraintStart_toStartOf="@+id/bg_dol"
+        app:layout_constraintTop_toBottomOf="@+id/button_odp3" />
+
+
+
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
