@@ -65,7 +65,7 @@ public class Profil extends AppCompatActivity {
         buttonHome.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Profil.this, Ladowanie.class);
+                Intent intent = new Intent(Profil.this, MainActivity.class);
                 startActivity(intent);
             }
         });

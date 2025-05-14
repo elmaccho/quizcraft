@@ -46,7 +46,8 @@ public class Logowanie extends AppCompatActivity {
 
         // Listener dla TextView rejestracji
         tvRegister.setOnClickListener(view -> {
-            Intent intent = new Intent(getApplicationContext(), Rejestracja.class);
+//            Intent intent = new Intent(getApplicationContext(), Rejestracja.class);
+            Intent intent = new Intent(Logowanie.this, Pytanie.class);
             startActivity(intent);
         });
 
@@ -94,7 +95,7 @@ public class Logowanie extends AppCompatActivity {
                                     editor.putString("photo", apiResponse.user.getPhoto());
                                     editor.apply();
 
-                                    Intent intent = new Intent(Logowanie.this, Ladowanie.class);
+                                    Intent intent = new Intent(Logowanie.this, Pytanie.class);
                                     startActivity(intent);
                                     finish();
                                 }

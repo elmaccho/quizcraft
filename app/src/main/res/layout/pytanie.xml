@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Podsumowanie">
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_h01"
@@ -185,7 +185,7 @@
         android:layout_height="wrap_content"
         android:indeterminate="false"
         android:max="100"
-        android:progress="70"
+        android:progress="100"
         android:padding="20dp"
         android:layout_marginTop="10dp"
         android:progressDrawable="@drawable/licznik"

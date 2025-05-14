@@ -27,7 +27,7 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         android:layout_marginTop="30dp"
-        android:text="ŁADOWANIE GRY"
+        android:text="SZUKANIE GRY"
         android:textStyle="bold"
         android:textAllCaps="true"
         android:textSize="25sp"
@@ -62,16 +62,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tv_czas" />
 
-    <TextView
-        android:id="@+id/tv_info"
-        android:layout_width="wrap_content"
+    <Button
+        android:id="@+id/btn_powrot"
+        android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:text="Jeśli w ciągu 30 sekund nie znajdziesz przeciwnika, zagraj sam lub wybierz inny quiz"
-        android:textColor="@color/white"
-        android:textSize="15sp"
+        android:background="@drawable/login_btn"
+        android:text="Powrót"
         android:textStyle="bold"
-        android:textAlignment="center"
-        android:padding="20dp"
+        android:textAllCaps="true"
+        android:textSize="20sp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btn_zagrajsam" />
