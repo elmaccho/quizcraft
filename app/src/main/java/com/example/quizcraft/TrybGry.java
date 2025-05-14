@@ -14,6 +14,8 @@ import androidx.core.view.WindowInsetsCompat;
 public class TrybGry extends AppCompatActivity {
 
     Button soloBtn, oneVs1Btn;
+    int categoryId;
+    String categoryName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,24 +28,29 @@ public class TrybGry extends AppCompatActivity {
             return insets;
         });
 
+        categoryId = getIntent().getIntExtra("CATEGORY_ID", -1);
+        categoryName = getIntent().getStringExtra("CATEGORY_NAME");
+
+        if (categoryId == -1) {
+            finish();
+            return;
+        }
+
         soloBtn = findViewById(R.id.button_solo);
         oneVs1Btn = findViewById(R.id.button_1v1);
 
-        soloBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(TrybGry.this, Ladowanie.class);
-                startActivity(intent);
-            }
+        soloBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(TrybGry.this, Ladowanie.class);
+            intent.putExtra("CATEGORY_ID", categoryId);
+            intent.putExtra("CATEGORY_NAME", categoryName);
+            startActivity(intent);
         });
 
-        oneVs1Btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(TrybGry.this, Ladowanie.class);
-                startActivity(intent);
-            }
+        oneVs1Btn.setOnClickListener(v -> {
+            Intent intent = new Intent(TrybGry.this, Ladowanie.class);
+            intent.putExtra("CATEGORY_ID", categoryId);
+            intent.putExtra("CATEGORY_NAME", categoryName);
+            startActivity(intent);
         });
-
     }
 }

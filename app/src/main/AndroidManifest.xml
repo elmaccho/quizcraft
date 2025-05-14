@@ -52,6 +52,10 @@
             android:name=".Podsumowanie"
             android:exported="false" />
 
+        <activity
+            android:name=".MainActivity"
+            android:exported="false" />
+        <activity android:name=".GameActivity" />
     </application>
 
 </manifest>

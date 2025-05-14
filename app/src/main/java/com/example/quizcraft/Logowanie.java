@@ -38,16 +38,14 @@ public class Logowanie extends AppCompatActivity {
             return insets;
         });
 
-        // Inicjalizacja elementów UI
         etEmail = findViewById(R.id.et_email);
         etPassword = findViewById(R.id.et_password);
         btnLogin = findViewById(R.id.btn_login);
         tvRegister = findViewById(R.id.tv_register);
 
-        // Listener dla TextView rejestracji
         tvRegister.setOnClickListener(view -> {
-//            Intent intent = new Intent(getApplicationContext(), Rejestracja.class);
-            Intent intent = new Intent(Logowanie.this, Pytanie.class);
+            Intent intent = new Intent(getApplicationContext(), Rejestracja.class);
+//            Intent intent = new Intent(Logowanie.this, Rejestracja.class);
             startActivity(intent);
         });
 
@@ -95,7 +93,7 @@ public class Logowanie extends AppCompatActivity {
                                     editor.putString("photo", apiResponse.user.getPhoto());
                                     editor.apply();
 
-                                    Intent intent = new Intent(Logowanie.this, Pytanie.class);
+                                    Intent intent = new Intent(Logowanie.this, MainActivity.class);
                                     startActivity(intent);
                                     finish();
                                 }

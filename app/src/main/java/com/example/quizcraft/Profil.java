@@ -80,7 +80,7 @@ public class Profil extends AppCompatActivity {
 
     private void fetchUserData(int userId) {
         Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl("http://192.168.1.224/")
+                .baseUrl(Config.BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
 

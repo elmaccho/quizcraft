@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
     Button buttonProfile;
     LinearLayout categoriesContainer;
     private static final int ITEMS_PER_ROW = 3;
-    private static final String BASE_URL = "http://192.168.1.224";
+    private static final String BASE_URL = Config.BASE_URL;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -142,7 +142,6 @@ public class MainActivity extends AppCompatActivity {
 
             button.setText(category.getName());
 
-            // Dołącz bazowy URL do względnej ścieżki
             String imageUrl = BASE_URL + category.getImage_url();
             Glide.with(this)
                     .load(imageUrl)
