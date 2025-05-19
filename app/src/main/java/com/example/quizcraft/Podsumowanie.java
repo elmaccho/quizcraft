@@ -1,6 +1,7 @@
 package com.example.quizcraft;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.TextView;
@@ -26,20 +27,21 @@ public class Podsumowanie extends AppCompatActivity {
         tvUsername = findViewById(R.id.username_tv);
         btnMainPage = findViewById(R.id.bt_stronaglowna);
 
-
         score = getIntent().getIntExtra("SCORE", 0);
         totalQuestions = getIntent().getIntExtra("TOTAL_QUESTIONS", 5);
         categoryName = getIntent().getStringExtra("CATEGORY_NAME");
 
+        SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
+        String username = prefs.getString("username", "Nieznany użytkownik");
+
         tvCategory.setText("Kategoria: " + categoryName);
         tvScore.setText(score + "/" + totalQuestions);
-        tvUsername.setText("");
+        tvUsername.setText(username);
 
         btnMainPage.setOnClickListener(v -> {
             Intent intent = new Intent(Podsumowanie.this, MainActivity.class);
             startActivity(intent);
             finish();
         });
-
     }
 }
