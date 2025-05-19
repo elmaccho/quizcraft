@@ -41,12 +41,5 @@ public class Podsumowanie extends AppCompatActivity {
             finish();
         });
 
-        btnPlayAgain.setOnClickListener(v -> {
-            Intent intent = new Intent(Podsumowanie.this, GameActivity.class);
-            intent.putExtra("CATEGORY_ID", getIntent().getIntExtra("CATEGORY_ID", -1));
-            intent.putExtra("CATEGORY_NAME", categoryName);
-            startActivity(intent);
-            finish();
-        });
     }
 }
