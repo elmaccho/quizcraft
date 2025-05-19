@@ -116,22 +116,8 @@
         android:textColor="#FFFFFF"
         android:textSize="20dp"
         android:textStyle="bold"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="120dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/gl_v03"
-        app:layout_constraintStart_toStartOf="@+id/gl_v01" />
-
-    <Button
-        android:id="@+id/bt_zagrajponownie"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:background="@drawable/main_button"
-        android:text="ZAGRAJ PONOWNIE"
-        android:textColor="#FFFFFF"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        android:layout_marginBottom="40dp"
-        app:layout_constraintBottom_toTopOf="@+id/bt_stronaglowna"
         app:layout_constraintEnd_toStartOf="@+id/gl_v03"
         app:layout_constraintStart_toStartOf="@+id/gl_v01" />
 

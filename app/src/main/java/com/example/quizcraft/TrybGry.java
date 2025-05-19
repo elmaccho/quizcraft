@@ -40,10 +40,11 @@ public class TrybGry extends AppCompatActivity {
         oneVs1Btn = findViewById(R.id.button_1v1);
 
         soloBtn.setOnClickListener(v -> {
-            Intent intent = new Intent(TrybGry.this, Ladowanie.class);
+            Intent intent = new Intent(TrybGry.this, GameActivity.class);
             intent.putExtra("CATEGORY_ID", categoryId);
             intent.putExtra("CATEGORY_NAME", categoryName);
             startActivity(intent);
+            finish();
         });
 
         oneVs1Btn.setOnClickListener(v -> {

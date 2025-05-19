@@ -11,7 +11,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class Podsumowanie extends AppCompatActivity {
 
     private TextView tvCategory, tvScore, tvSummary, tvUsername;
-    private Button btnMainPage, btnPlayAgain;
+    private Button btnMainPage;
     private int score, totalQuestions;
     private String categoryName;
 
@@ -25,7 +25,7 @@ public class Podsumowanie extends AppCompatActivity {
         tvScore = findViewById(R.id.textView);
         tvUsername = findViewById(R.id.username_tv);
         btnMainPage = findViewById(R.id.bt_stronaglowna);
-        btnPlayAgain = findViewById(R.id.bt_zagrajponownie);
+
 
         score = getIntent().getIntExtra("SCORE", 0);
         totalQuestions = getIntent().getIntExtra("TOTAL_QUESTIONS", 5);
