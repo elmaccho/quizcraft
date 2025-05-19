@@ -22,4 +22,9 @@ public class RetrofitClient {
     public static GetCategoriesApi getApiService() {
         return getRetrofitInstance().create(GetCategoriesApi.class);
     }
+
+    public static AnswerUpdateApi getAnswerUpdateApi() {
+        return getRetrofitInstance().create(AnswerUpdateApi.class);
+    }
+
 }

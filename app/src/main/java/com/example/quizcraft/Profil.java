@@ -107,6 +107,7 @@ public class Profil extends AppCompatActivity {
                         int gamesLost = jsonObject.get("game_lost").getAsInt();
                         int answers = jsonObject.get("answers").getAsInt();
                         int correctAnswers = jsonObject.get("correct_answers").getAsInt();
+                        int allgames = jsonObject.get("quizzes_played").getAsInt();
                         int dayStreak = jsonObject.get("day_streak").getAsInt();
 
                         String formattedDate = "";
@@ -121,7 +122,6 @@ public class Profil extends AppCompatActivity {
                             }
                         }
 
-                        int allgames = gamesWon + gamesDraw + gamesLost;
                         String effectiveness = answers > 0 ? String.format(Locale.getDefault(), "%.0f%%", (correctAnswers * 100.0 / answers)) : "0%";
 
                         tvNick.setText("@" + username);
