@@ -36,6 +36,7 @@ public class Ladowanie extends AppCompatActivity {
     CountDownTimer timer;
     boolean isCheckingStatus = false;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
