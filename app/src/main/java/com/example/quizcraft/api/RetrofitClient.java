@@ -27,4 +27,7 @@ public class RetrofitClient {
         return getRetrofitInstance().create(AnswerUpdateApi.class);
     }
 
+    public static MatchmakingApi getMatchmakingApi() {
+        return getRetrofitInstance().create(MatchmakingApi.class);
+    }
 }

@@ -122,7 +122,6 @@
         app:layout_constraintStart_toStartOf="@+id/gl_v01" />
 
     <TextView
-
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="PODSUMOWANIE"
@@ -252,6 +251,25 @@
                     android:textSize="14sp" />
 
             </LinearLayout>
+        </LinearLayout>
+
+        <!-- Podsumowanie gry -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="16dp"
+            android:gravity="center_horizontal|center_vertical">
+
+            <TextView
+                android:id="@+id/tv_summary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Podsumowanie gry"
+                android:textColor="#EEEEEE"
+                android:textSize="20sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </LinearLayout>
