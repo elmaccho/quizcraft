@@ -14,7 +14,7 @@ if ($user_id <= 0) {
     die(json_encode(['error' => 'Nieprawidłowe ID użytkownika']));
 }
 
-$query = "SELECT id, username, name, email, password, photo, games_won, game_lost, games_draw, day_streak, answers, correct_answers, last_played, created_at  FROM users WHERE id = ?";
+$query = "SELECT id, username, name, email, password, photo, games_won, game_lost, games_draw, day_streak, quizzes_played, answers, correct_answers, last_played, created_at FROM users WHERE id = ?";
 $stmt = $mysqli->prepare($query);
 
 if (!$stmt) {
