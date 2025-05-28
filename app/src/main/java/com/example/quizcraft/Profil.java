@@ -30,7 +30,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Profil extends AppCompatActivity {
 
     Button buttonHome;
-    private TextView tvNick, tvData, tvRozQuizy1, tvDni1, tvSku1, tvKategoria1;
+    private TextView tvNick, tvData, tvRozQuizy1, tvSku1;
     private ImageView ivProfil, cameraButton;
 
     @Override
@@ -41,9 +41,7 @@ public class Profil extends AppCompatActivity {
         tvNick = findViewById(R.id.tv_nick);
         tvData = findViewById(R.id.tv_data);
         tvRozQuizy1 = findViewById(R.id.tv_rozquizy1);
-        tvDni1 = findViewById(R.id.tv_dni1);
         tvSku1 = findViewById(R.id.tv_sku1);
-        tvKategoria1 = findViewById(R.id.tv_kategoria1);
         ivProfil = findViewById(R.id.iv_profil);
         buttonHome = findViewById(R.id.button_home);
 
@@ -91,13 +89,9 @@ public class Profil extends AppCompatActivity {
 
                         String username = jsonObject.get("username").getAsString();
                         String createdAt = jsonObject.has("created_at") && !jsonObject.get("created_at").isJsonNull() ? jsonObject.get("created_at").getAsString() : "";
-                        int gamesWon = jsonObject.get("games_won").getAsInt();
-                        int gamesDraw = jsonObject.get("games_draw").getAsInt();
-                        int gamesLost = jsonObject.get("game_lost").getAsInt();
                         int answers = jsonObject.get("answers").getAsInt();
                         int correctAnswers = jsonObject.get("correct_answers").getAsInt();
                         int allgames = jsonObject.get("quizzes_played").getAsInt();
-                        int dayStreak = jsonObject.get("day_streak").getAsInt();
 
                         String formattedDate = "";
                         if (!createdAt.isEmpty()) {
@@ -116,9 +110,7 @@ public class Profil extends AppCompatActivity {
                         tvNick.setText("@" + username);
                         tvData.setText(formattedDate);
                         tvRozQuizy1.setText(String.valueOf(allgames));
-                        tvDni1.setText(String.valueOf(dayStreak));
                         tvSku1.setText(effectiveness);
-                        tvKategoria1.setText("GEOGRAFIA");
 
                     } catch (IOException e) {
                         Toast.makeText(Profil.this, "Błąd parsowania danych", Toast.LENGTH_LONG).show();
