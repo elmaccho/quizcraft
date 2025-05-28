@@ -82,28 +82,28 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.66" />
+        app:layout_constraintGuide_percent="0.60" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_h06"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.84" />
+        app:layout_constraintGuide_percent="0.65" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_h07"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.95" />
+        app:layout_constraintGuide_percent="0.78" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/gl_h08"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.73" />
+        app:layout_constraintGuide_percent="0.52" />
 
     <View
         android:id="@+id/bg_gora"
@@ -197,16 +197,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/gl_h02" />
 
-    <ImageView
-        android:id="@+id/cameraButton"
-        android:layout_width="48dp"
-        android:layout_height="48dp"
-        android:src="@drawable/edit"
-        app:layout_constraintEnd_toEndOf="@+id/iv_profil"
-        app:layout_constraintBottom_toBottomOf="@+id/iv_profil"
-        android:layout_marginEnd="-5dp"
-        android:layout_marginBottom="-5dp" />
-
     <TextView
         android:id="@+id/tv_nick"
         android:layout_width="wrap_content"
@@ -231,112 +221,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/gl_h03" />
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="#FFFFFF"
-        app:layout_constraintBottom_toTopOf="@+id/gl_h04"
-        app:layout_constraintEnd_toStartOf="@+id/gl_v03"
-        app:layout_constraintStart_toStartOf="@+id/gl_v04" />
-
-    <View
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:background="#FFFFFF"
-        android:layout_marginTop="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/gl_h05"
-        app:layout_constraintEnd_toStartOf="@+id/gl_v03"
-        app:layout_constraintStart_toStartOf="@+id/gl_v04"
-        app:layout_constraintTop_toBottomOf="@+id/tv_wygrane1" />
-
-    <TextView
-        android:id="@+id/tv_wyniki"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wyniki"
-        android:textColor="#FFFFFF"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="15dp"
-        app:layout_constraintStart_toStartOf="@+id/gl_v04"
-        app:layout_constraintTop_toTopOf="@+id/gl_h04" />
-
-    <TextView
-        android:id="@+id/tv_wygrane"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Wygrane"
-        android:textColor="#83FD73"
-        android:textSize="15sp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/gl_v05"
-        app:layout_constraintStart_toStartOf="@+id/gl_v05"
-        app:layout_constraintTop_toBottomOf="@+id/tv_wyniki" />
-
-    <TextView
-        android:id="@+id/tv_wygrane1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:textColor="#83FD73"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/gl_v05"
-        app:layout_constraintStart_toStartOf="@+id/gl_v05"
-        app:layout_constraintTop_toBottomOf="@+id/tv_wygrane" />
-
-    <TextView
-        android:id="@+id/tv_remisy"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Remisy"
-        android:textColor="#FBFF79"
-        android:textSize="15sp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/gl_v01"
-        app:layout_constraintStart_toStartOf="@+id/gl_v01"
-        app:layout_constraintTop_toBottomOf="@+id/tv_wyniki" />
-
-    <TextView
-        android:id="@+id/tv_remisy1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:textColor="#FBFF79"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/gl_v01"
-        app:layout_constraintStart_toStartOf="@+id/gl_v01"
-        app:layout_constraintTop_toBottomOf="@+id/tv_wygrane" />
-
-    <TextView
-        android:id="@+id/tv_porazki"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Porażki"
-        android:textColor="#FB6A57"
-        android:textSize="15sp"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/gl_v06"
-        app:layout_constraintStart_toStartOf="@+id/gl_v06"
-        app:layout_constraintTop_toBottomOf="@+id/tv_wyniki" />
-
-    <TextView
-        android:id="@+id/tv_porazki1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="0"
-        android:textColor="#FB6A57"
-        android:textSize="48sp"
-        android:textStyle="bold"
-        android:layout_marginTop="5dp"
-        app:layout_constraintEnd_toStartOf="@+id/gl_v06"
-        app:layout_constraintStart_toStartOf="@+id/gl_v06"
-        app:layout_constraintTop_toBottomOf="@+id/tv_wygrane" />
-
     <TextView
         android:id="@+id/tv_statystyki"
         android:layout_width="wrap_content"
@@ -347,7 +231,7 @@
         android:textStyle="bold"
         android:layout_marginTop="15dp"
         app:layout_constraintStart_toStartOf="@+id/gl_v04"
-        app:layout_constraintTop_toTopOf="@+id/gl_h05" />
+        app:layout_constraintTop_toTopOf="@+id/gl_h04" />
 
     <LinearLayout
         android:id="@+id/linearLayout1"

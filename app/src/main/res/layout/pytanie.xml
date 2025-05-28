@@ -99,56 +99,6 @@
         app:layout_constraintStart_toEndOf="@+id/avatar"
         app:layout_constraintTop_toTopOf="@+id/gl_h01" />
 
-    <ImageView
-        android:id="@+id/iv_01"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/dobre"
-        app:layout_constraintStart_toEndOf="@+id/avatar"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <ImageView
-        android:id="@+id/iv_02"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/zle"
-        app:layout_constraintStart_toEndOf="@+id/iv_01"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <ImageView
-        android:id="@+id/iv_03"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginLeft="5dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/dobre"
-        app:layout_constraintStart_toEndOf="@+id/iv_02"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <ImageView
-        android:id="@+id/iv_04"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/zegar"
-        android:layout_marginLeft="5dp"
-        app:layout_constraintStart_toEndOf="@+id/iv_03"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
-    <ImageView
-
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/zegar"
-        android:layout_marginLeft="5dp"
-        app:layout_constraintStart_toEndOf="@+id/iv_04"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
-
     <TextView
         android:id="@+id/tv_runda"
         android:layout_width="wrap_content"
@@ -172,8 +122,9 @@
         android:text="Ile wierzchołkow ma sześcian?"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="30dp"
+        android:textSize="23dp"
         android:textStyle="bold"
+        android:padding="18dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/avatar" />

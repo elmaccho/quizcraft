@@ -1,22 +1,13 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.QuizCraft" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    <!-- Główny Theme aplikacji -->
+    <style name="Theme.QuizCraft" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Splash Screen customization -->
+        <item name="android:windowSplashScreenBackground">@color/black</item> <!-- Albo inny kolor, jak chcesz -->
+        <item name="android:windowSplashScreenAnimatedIcon">@mipmap/ic_launcher</item>
     </style>
 
-    <style name="Base.Theme.Quizcraft_profil" parent="Theme.Material3.DayNight.NoActionBar">
-        <!--  Customize your light theme here.  -->
-        <!--  <item name="colorPrimary">@color/my_light_primary</item>  -->
+    <!-- Theme dla profilu (jak potrzebujesz) -->
+    <style name="Theme.QuizCraft.Profile" parent="Theme.QuizCraft">
+        <!-- Customize profile-specific shit here -->
     </style>
-    <style name="Theme.Quizcraft_profil" parent="Base.Theme.Quizcraft_profil"/>
-
-    <style name="Theme.QuizCraft" parent="Base.Theme.QuizCraft" />
-
-
-    <style name="Base.Theme.Quizcraft" parent="Theme.AppCompat.Light.NoActionBar">
-        <!--  Customize your light theme here.  -->
-        <!--  <item name="colorPrimary">@color/my_light_primary</item>  -->
-    </style>
-    <style name="Theme.Quizcraft" parent="Base.Theme.Quizcraft"/>
 </resources>

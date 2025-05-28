@@ -46,8 +46,8 @@ public class Podsumowanie extends AppCompatActivity {
         int userId = prefs.getInt("userId", -1);
 
         tvCategory.setText("Kategoria: " + categoryName);
-        tvScore.setText("Twój wynik: " + score + "/" + totalQuestions);
-        tvUsername.setText("Użytkownik: " + username);
+        tvScore.setText(score + "/" + totalQuestions);
+        tvUsername.setText(username);
 
         if (is1v1 && opponentScore != -1) {
             String summaryText;
@@ -60,7 +60,7 @@ public class Podsumowanie extends AppCompatActivity {
             }
             tvSummary.setText(summaryText);
         } else {
-            tvSummary.setText("Zakończono grę w trybie solo.");
+            tvSummary.setText("");
         }
 
         btnMainPage.setOnClickListener(v -> {

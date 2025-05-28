@@ -30,7 +30,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class Profil extends AppCompatActivity {
 
     Button buttonHome;
-    private TextView tvNick, tvData, tvWygrane1, tvRemisy1, tvPorazki1, tvRozQuizy1, tvDni1, tvSku1, tvKategoria1;
+    private TextView tvNick, tvData, tvRozQuizy1, tvDni1, tvSku1, tvKategoria1;
     private ImageView ivProfil, cameraButton;
 
     @Override
@@ -40,15 +40,11 @@ public class Profil extends AppCompatActivity {
         // Inicjalizacja widoków
         tvNick = findViewById(R.id.tv_nick);
         tvData = findViewById(R.id.tv_data);
-        tvWygrane1 = findViewById(R.id.tv_wygrane1);
-        tvRemisy1 = findViewById(R.id.tv_remisy1);
-        tvPorazki1 = findViewById(R.id.tv_porazki1);
         tvRozQuizy1 = findViewById(R.id.tv_rozquizy1);
         tvDni1 = findViewById(R.id.tv_dni1);
         tvSku1 = findViewById(R.id.tv_sku1);
         tvKategoria1 = findViewById(R.id.tv_kategoria1);
         ivProfil = findViewById(R.id.iv_profil);
-        cameraButton = findViewById(R.id.cameraButton);
         buttonHome = findViewById(R.id.button_home);
 
         SharedPreferences prefs = getSharedPreferences("MyPrefs", MODE_PRIVATE);
@@ -66,13 +62,6 @@ public class Profil extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Profil.this, MainActivity.class);
-                startActivity(intent);
-            }
-        });
-        cameraButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Profil.this, Ustawienia.class);
                 startActivity(intent);
             }
         });
@@ -126,9 +115,6 @@ public class Profil extends AppCompatActivity {
 
                         tvNick.setText("@" + username);
                         tvData.setText(formattedDate);
-                        tvWygrane1.setText(String.valueOf(gamesWon));
-                        tvRemisy1.setText(String.valueOf(gamesDraw));
-                        tvPorazki1.setText(String.valueOf(gamesLost));
                         tvRozQuizy1.setText(String.valueOf(allgames));
                         tvDni1.setText(String.valueOf(dayStreak));
                         tvSku1.setText(effectiveness);

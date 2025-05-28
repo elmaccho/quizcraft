@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
                     .into(imageView);
 
             button.setOnClickListener(v -> {
-                Intent intent = new Intent(MainActivity.this, TrybGry.class);
+                Intent intent = new Intent(MainActivity.this, GameActivity.class);
                 intent.putExtra("CATEGORY_ID", category.getId());
                 intent.putExtra("CATEGORY_NAME", category.getName());
                 startActivity(intent);

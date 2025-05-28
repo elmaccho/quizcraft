@@ -36,17 +36,6 @@
             android:name=".Pytanie"
             android:exported="false" />
 
-        <activity
-            android:name=".TrybGry"
-            android:exported="false" />
-
-        <activity
-            android:name=".Ustawienia"
-            android:exported="true" />
-
-        <activity
-            android:name=".Ladowanie"
-            android:exported="false" />
 
         <activity
             android:name=".Podsumowanie"
